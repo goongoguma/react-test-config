@@ -21,7 +21,7 @@ npm i -D webpack webpack-cli webpack-dev-server
 webpack.config.js와 package.json에 기본적인 옵션 세팅
 ```js
 // package.json
-"start": "webpack serve --config ./webpack.config.js --mode development",
+"start": "webpack",
 
 // webpack.config.js
 const path = require("path");
@@ -49,7 +49,7 @@ You may need an appropriate loader to handle this file type, currently no loader
 
 babel 설치후 webpack.config.js 설정
 ```js
-npm i -D babel-loader @babel/core @babel/preset-env
+npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react
 
 // 바벨 설치 후, webpack.config.js와 babel.config.js 설정
 const path = require("path");
@@ -154,5 +154,21 @@ Module not found: Error: Can't resolve 'object-assign' in 'C:\Users\안재현\Do
 
 ## 세번째 에러(버그)
 - npm start후 컴파일은 문제없이 되지만 번들링된 파일인 bundle.js가 보이지 않는다. 
-아마 webpack.config.js에서 entry와 output의 경로를 잘못 설정해서 발생하는 문제인듯하다 
+아마 webpack.config.js에서 entry와 output의 경로를 잘못 설정해서 발생하는 문제인듯.
+entry와 output을 아래와 같이 수정했다.
+```js
+  entry: './src/index.tsx',
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: 'bundle.js'
+  },
+```
+- 버그 해결
+
+- package.json에서 start 부분을 아래와 같이 수정
+```js
+"start": "webpack serve",
+```
+
+- 번들전에는 콘솔의 소스 부분에서 앱에 필요한 여러 파일들을 가져왔지만 번들후에는 번들링된 bundle.js와 main.css 두개로 압축된것을 확인할 수 있었다.
 
