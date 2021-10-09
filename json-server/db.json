@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "신발",
+      "image": "👟",
+      "stock": 10,
+      "price": 4000,
+      "isVIP": true,
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "name": "우산",
+      "image": "☂️",
+      "stock": 10,
+      "price": 5000,
+      "isVIP": true,
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "name": "선글라스",
+      "image": "🕶",
+      "stock": 10,
+      "price": 10000,
+      "isVIP": true,
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "name": "부츠",
+      "image": "👢",
+      "stock": 10,
+      "price": 5000,
+      "isVIP": true,
+      "quantity": 0
+    },
+    {
+      "id": 5,
+      "name": "코트",
+      "image": "🧥",
+      "stock": 10,
+      "price": 20000,
+      "isVIP": true,
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "name": "안경",
+      "image": "👓",
+      "stock": 10,
+      "price": 10000,
+      "isVIP": false,
+      "quantity": 0
+    },
+    {
+      "id": 7,
+      "name": "장갑",
+      "image": "🧤",
+      "stock": 10,
+      "price": 3000,
+      "isVIP": false,
+      "quantity": 0
+    },
+    {
+      "id": 8,
+      "name": "반지",
+      "image": "💍",
+      "stock": 10,
+      "price": 1000,
+      "isVIP": false,
+      "quantity": 0
+    },
+    {
+      "id": 9,
+      "name": "가방",
+      "image": "💼",
+      "stock": 10,
+      "price": 500,
+      "isVIP": false,
+      "quantity": 0
+    },
+    {
+      "id": 10,
+      "name": "모자",
+      "image": "🧢",
+      "stock": 10,
+      "price": 5000,
+      "isVIP": false,
+      "quantity": 0
+    },
+    {
+      "id": 11,
+      "name": "구두",
+      "image": "👞",
+      "stock": 10,
+      "price": 1000,
+      "isVIP": false,
+      "quantity": 0
+    }
+  ],
+  "purchase": []
+}
