@@ -12,6 +12,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import './test.scss';
 
 function App() {
   const [products, setProducts] = useState<Data[] | []>([]);
@@ -45,6 +46,12 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <div className="scss-test">
+        SCSS
+        <div className="scss-test-child">
+          SCSS CHILD
+        </div>
+      </div>
     </div>
   );
 }

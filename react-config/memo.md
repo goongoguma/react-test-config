@@ -173,3 +173,27 @@ entry와 output을 아래와 같이 수정했다.
 
 - 번들전에는 콘솔의 소스 부분에서 앱에 필요한 여러 파일들을 가져왔지만 번들후에는 번들링된 bundle.js와 main.css 두개로 압축된것을 확인할 수 있었다.
 
+## 네번째 에러 
+- sass를 사용하기 위해 sass를 설치후, 파일을 만들어준뒤 App.tsx에 import하고 실행하면 에러발생
+```js
+ERROR in ./src/test.scss 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+```
+- sass에 맞는 로더가 없어서 발생하는 문제
+- sass-loader 설치
+- webpack.config.js에서 기존 css로더 설정한 부분을 아래와 같이 설정
+```js
+  {
+    test: /\.s?css$/i,
+    use: [
+      {
+        loader: MiniCssExtractPlugin.loader,
+        options: { publicPath: "" }
+      },
+      "css-loader", "sass-loader"
+    ]
+  }
+```
+- 작동 이상무
+
