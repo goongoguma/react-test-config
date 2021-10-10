@@ -21,6 +21,7 @@ npm i -D webpack webpack-cli webpack-dev-server
 webpack.config.js와 package.json에 기본적인 옵션 세팅
 ```js
 // package.json
+// webpack 명령어가 실행되면 디폴트로 실행할 파일은 같은 경로에 있는 webpack.config.js에 내용을 가지고 빌드 된다.
 "start": "webpack",
 
 // webpack.config.js
