@@ -255,3 +255,4 @@ import "react-app-polyfill/stable";
   target: ["web", "es5"],
 ```
 - ie11에서 작동 이상무
+- [참조](https://velog.io/@rjsdnql123/%ED%81%AC%EB%A1%9C%EC%8A%A4-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A7%95-2-script-%EA%B5%AC%EB%AC%B8%EC%98%A4%EB%A5%98-1002-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0)
