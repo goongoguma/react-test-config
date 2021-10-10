@@ -204,3 +204,54 @@ You may need an appropriate loader to handle this file type, currently no loader
 - 아래의 동영상을 보고 해결
 - https://www.youtube.com/watch?v=lNkVndKCum8
 
+## 여섯번째 에러
+- ie11에서 localhost:3000에 접속하면 화면에 아무것도 보이지 않는다.
+- .browserslistrc 파일을 만들어준다.
+- npm i react-app-polyfill 설치
+- index.tsx 최상단의 아래의 코드 추가
+```js
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
+```
+- index.tsx 최상단에 import함
+- package.json 수정
+```js
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
+  },
+```
+- 실행했더니 똑같이 안나옴. 그런데 이젠 콘솔창에 구문오류 1002번이 나오고있음
+- 에러를 살펴보았더니 번들링된 bundle.js파일 시작부터 화살표 함수를 사용중
+- babel.config.js에서 브라우저 버전 지정
+```js
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "ie": "11"
+        },
+        "debug": true	
+      }
+    ],
+    "@babel/preset-react"
+  ]
+}
+```
+- 다음으로 webpack에서 target에 es5추가
+```js
+  target: ["web", "es5"],
+```
+- ie11에서 작동 이상무

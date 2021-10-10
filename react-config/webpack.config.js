@@ -57,7 +57,7 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
   },
-  target: "web",
+  target: ["web", "es5"],
   devServer: {
     hot: true,
     host: 'localhost',
