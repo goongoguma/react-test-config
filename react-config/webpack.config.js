@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
 const mode = process.env.NODE_ENV || "development";
-const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 const port = process.env.PORT || 3000;
 
@@ -58,7 +57,7 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
   },
-  target,
+  target: "web",
   devServer: {
     hot: true,
     host: 'localhost',
