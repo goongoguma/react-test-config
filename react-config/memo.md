@@ -206,7 +206,6 @@ You may need an appropriate loader to handle this file type, currently no loader
 
 ## 여섯번째 에러
 - ie11에서 localhost:3000에 접속하면 화면에 아무것도 보이지 않는다.
-- .browserslistrc 파일을 만들어준다.
 - npm i react-app-polyfill 설치
 - index.tsx 최상단의 아래의 코드 추가
 ```js
