@@ -2,10 +2,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
+const mode = process.env.NODE_ENV || "development";
+const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
+
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  mode: 'development',
+  mode,
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -52,9 +55,11 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
   },
+  target,
   devServer: {
+    hot: true,
     host: 'localhost',
     port,
-    open: true
+    open: true,
   }
 }

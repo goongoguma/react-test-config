@@ -197,3 +197,10 @@ You may need an appropriate loader to handle this file type, currently no loader
 ```
 - 작동 이상무
 
+## 다섯번째 에러
+- 웹팩의 핫모듈리로드 기능이 작동이 안된다.
+- 콘솔창에 [HMR] Waiting for update signal from WDS... 이 메세지만 뜨고있는 상태
+- webpack5의 버그인듯하다.
+- 아래의 동영상을 보고 해결
+- https://www.youtube.com/watch?v=lNkVndKCum8
+
