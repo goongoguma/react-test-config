@@ -1,6 +1,7 @@
 {
     "env": {
         "browser": true,
+        "node": true,
         "es2021": true
     },
     "extends": [
@@ -22,6 +23,7 @@
     ],
     "rules": {
         "no-console": "error",
-        "no-plusplus": "error"
+        "no-plusplus": "error",
+        "@typescript-eslint/no-var-requires": 0
     }
 }
