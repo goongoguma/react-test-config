@@ -173,7 +173,15 @@ entry와 output을 아래와 같이 수정했다.
 
 - 번들전에는 콘솔의 소스 부분에서 앱에 필요한 여러 파일들을 가져왔지만 번들후에는 번들링된 bundle.js와 main.css 두개로 압축된것을 확인할 수 있었다.
 
-## 네번째 에러 
+## 네번째 에러(버그)
+- 웹팩에 추가할 로더인 html-webpack-plugin을 설치후에 세팅하고 실행하니 아래와 같은 에러가 발생
+```js
+Error: The loader html-webpack-plugin didn't return html.
+```
+- html-webpack-plugin의 버전을 5.1.0으로 올렸더니 해결
+[참조](https://github.com/webpack/webpack/issues/12687)
+
+## 다섯번째 에러 
 - sass를 사용하기 위해 sass를 설치후, 파일을 만들어준뒤 App.tsx에 import하고 실행하면 에러발생
 ```js
 ERROR in ./src/test.scss 1:0
@@ -197,14 +205,14 @@ You may need an appropriate loader to handle this file type, currently no loader
 ```
 - 작동 이상무
 
-## 다섯번째 에러
+## 여섯번째 에러
 - 웹팩의 핫모듈리로드 기능이 작동이 안된다.
 - 콘솔창에 [HMR] Waiting for update signal from WDS... 이 메세지만 뜨고있는 상태
 - webpack5의 버그인듯하다.
 - 아래의 동영상을 보고 해결
 - https://www.youtube.com/watch?v=lNkVndKCum8
 
-## 여섯번째 에러
+## 일곱번째 에러
 - ie11에서 localhost:3000에 접속하면 화면에 아무것도 보이지 않는다.
 - npm i react-app-polyfill 설치
 - index.tsx 최상단의 아래의 코드 추가
