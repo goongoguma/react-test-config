@@ -55,6 +55,13 @@ module.exports = {
     })
   ],
   resolve: {
+    alias: {
+      "@src": path.resolve(__dirname, "src"),
+      // "@views": path.resolve(__dirname, "src/views"),
+      "@views": "/src/views/",
+      "@components": path.resolve(__dirname, "src/components"),
+      "@type": path.resolve(__dirname, "src/type")
+    },
     extensions: [".tsx", ".ts", ".js"]
   },
   target: ["web", "es5"],

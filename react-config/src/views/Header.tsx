@@ -1,5 +1,5 @@
 import React from 'react';
-import { Data } from '../type/type';
+import { Data } from '@type/type';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 

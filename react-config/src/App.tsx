@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Header from './views/Header';
-import All from './views/All';
-import Normal from './views/Normal';
-import Vip from './views/Vip';
-import Cart from './views/Cart';
+import Header from '@src/views/Header';
+import All from "@views/All";
+import Normal from '@views/Normal';
+import Vip from '@views/Vip';
+import Cart from '@views/Cart';
 import { getAllProducts } from './api/api';
-import { Data } from './type/type';
+import { Data } from '@type/type';
 import {
   BrowserRouter as Router,
   Switch,
@@ -49,7 +49,7 @@ function App() {
       <div className="scss-test">
         SCSS123
         <div className="scss-test-child">
-          SCSS CHILD123
+          SCSS CHILD
         </div>
       </div>
     </div>

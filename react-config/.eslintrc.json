@@ -22,7 +22,6 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": "error",
         "no-plusplus": "error",
         "@typescript-eslint/no-var-requires": 0
     }

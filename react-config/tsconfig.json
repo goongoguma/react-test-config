@@ -5,6 +5,23 @@
       "dom.iterable",
       "esnext"
     ],
+    // https://www.typescriptlang.org/tsconfig#baseUrl
+    "baseUrl": "./",
+    // https://www.typescriptlang.org/tsconfig#paths
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@views/*": [
+        "src/views/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@type/*": [
+        "src/type/*"
+      ]
+    },
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

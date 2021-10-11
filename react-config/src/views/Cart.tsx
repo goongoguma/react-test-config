@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { getAllProducts, updateStock, updatePurchase } from '../api/api';
-import { Data, DataFunc } from '../type/type';
-import CartItems from '../components/CartItems';
-import ConfirmModal from '../components/ConfirmModal';
+import { Data, DataFunc } from '@type/type';
+import CartItems from '@components/CartItems';
+import ConfirmModal from '@components/ConfirmModal';
 import { handleAddStock } from '../utils/utils';
 import styled from 'styled-components';
 

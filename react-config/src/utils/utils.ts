@@ -1,5 +1,5 @@
 import { updateStock, getAllProducts } from '../api/api';
-import { Data, DataFunc } from '../type/type';
+import { Data, DataFunc } from '@type/type';
 import styled, { css } from 'styled-components';
 
 export const handleAddStock = (

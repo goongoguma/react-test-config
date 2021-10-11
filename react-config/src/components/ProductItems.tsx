@@ -1,5 +1,5 @@
 import React from 'react';
-import { Data } from '../type/type';
+import { Data } from '@type/type';
 import {
   Item,
   ItemHeader,

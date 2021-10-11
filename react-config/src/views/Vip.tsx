@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getVipProducts } from '../api/api';
 import { Link } from 'react-router-dom';
-import FruitItems from '../components/ProductItems';
-import { Data, DataFunc } from '../type/type';
+import FruitItems from '@components/ProductItems';
+import { Data, DataFunc } from '@type/type';
 import {
   handleAddStock,
   handleAddQuantity,

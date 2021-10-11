@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Data } from '../type/type';
+import { Data } from '@type/type';
 
 const baseURL = "http://localhost:9000";
 
